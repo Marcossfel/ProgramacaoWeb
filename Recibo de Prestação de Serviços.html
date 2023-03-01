@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Meu Primeiro HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(248, 248, 248);
+        }
+
+        h1 {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .formulario {
+            width: 1000px;
+            margin: 0 auto;
+            border: 1px solid gainsboro;
+            padding: 100px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+        }
+
+      
+        button {
+            cursor: pointer;
+            margin: auto;
+            margin-top: 10px;
+            border: none;
+            width: 50%;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #5cb85c;
+            font-weight: bold;
+            box-shadow: 0px 0px 5px black;
+        }
+
+        #resultado {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="formulario">
+        <h1>Recibo de Prestação de Serviço</h1>
+        <label>Valor:
+                <input placeholder="Insira o Valor" class="input-verde" id="valorInput" type="number" text-align: right; display: block;
+                margin-bottom: 5px;>
+        </label>
+        <label>Valor recebido</label>
+        <label>Nº do recibo:(opcional)
+            <input placeholder="Insira o Nº do recibo" class="input-vermelho" id="Nº do reciboInput" type="number" text-align:
+                left;>
+        <label>
+        <label>Ex.: 001/2018</label>
+        <label>Contratante:<label>
+        <input placeholder="Insira o nome do Contratante" class="input-vermelho" id="Nº do reciboInput" type="number">
+        <button onclick="GerarRecibo()" style="display:block" id="botao">Gerar Recibo</button>
+
+        <div id="resultado"></div>
+    </div>
+    <script>
+        function GerarRecibo() {
+          
+        }
+    </script>
+</body>
+
+</html>
