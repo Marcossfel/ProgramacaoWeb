@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <title>Meu Primeiro HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(248, 248, 248);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .formulario {
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid gainsboro;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
+    }
+
+    label {
+      text-align: center;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid rgb(172, 172, 172);
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      cursor: pointer;
+      margin: auto;
+      margin-top: 10px;
+      border: none;
+      width: 50%;
+      font-size: 16px;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: #5cb85c;
+      font-weight: bold;
+      box-shadow: 0px 0px 5px black;
+    }
+
+    #resultado {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Calculadora de IMC</h1>
+  <div class="formulario">
+    <label>Peso(kg)</label>
+    <input class="input-verde" id="pesoInput" type="number">
+    <label>Altura(m)</label>
+    <input class="input-vermelho" id="alturaInput" type="number">
+    <button onclick="calcularImc()" style="display:block" id="botao">Calcular</button>
+    <div id="resultado">☻</div>
+  </div>
+  <script>
+    function calcularImc() {
+      var peso = document.getElementById("pesoInput").value;
+      var altura = document.getElementById("alturaInput").value;
+      var resultado;
+      if (altura > 0 && peso > 0) {
+        resultado = "Seu imc é " + (peso / (altura * altura)).toFixed(2);
+      } else {
+        resultado = "Informe o peso e a altura!"
+      }
+      var divResultado = document.getElementById("resultado");
+      divResultado.innerHTML = resultado;
+    }
+  </script>
+</body>
+
+</html>
